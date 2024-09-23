@@ -3,6 +3,8 @@ run-name: ${{ github.actor }} is checking rules
 on:
   push:
     branches: [ "main" ]
+    paths:
+    - 'prometheus/config/*.yml'
     
 jobs:
   on-push:
