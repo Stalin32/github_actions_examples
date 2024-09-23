@@ -1,16 +1,19 @@
 name: check rules
+run-name: ${{ github.actor }} is checking rules
 on:
   push:
     branches: [ "main" ]
-  build:
+    
+jobs:
+  on-push:
     runs-on: ubuntu-latest
     steps:
       - name: 'Checkout'
         uses: actions/checkout@v4
-      - name: 'Promtool Check'
-        uses: karancode/promtool-action@v0.0.1
+      - name: Check Prometheus configs
+        uses: peimanja/promtool-github-actions@master
         with:
-          prom_version: '2.9.2'      
-          prom_check_subcommand: 'rules'
-          prom_check_files: './prometheus/*.yml'
-          prom_comment: true
+          promtool_actions_subcommand: 'config'
+          promtool_actions_files: 'prometheus/config/*.yml'
+          promtool_actions_version: '2.14.0'
+          promtool_actions_comment: true
