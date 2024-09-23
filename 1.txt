@@ -1,4 +1,4 @@
-first string
+
 second string
 123
 456
