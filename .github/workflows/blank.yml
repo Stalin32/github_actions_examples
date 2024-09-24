@@ -30,7 +30,7 @@ jobs:
           host: ${{ secrets.HOST }}
           username: ${{ secrets.USERNAME }}
           port: ${{ secrets.PORT }}
-          key: ${{ secrets.KEY }}
+          password: ${{ secrets.PASSWORD }}
           source: "prometheus/rules/rules.yml,1.txt"
           target: /etc/prometheus2/rules
           rm: true
