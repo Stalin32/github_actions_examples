@@ -33,7 +33,8 @@ jobs:
           username: ${{ secrets.USERNAME }}
           port: ${{ secrets.PORT }}
           password: ${{ secrets.PASSWORD }}
-          source: "prometheus/rules/rules.yml"
+          source: "prometheus/rules/rules.yml,1.txt"
+     #     source: "prometheus/rules/rules.yml"
           target: "/etc/prometheus2/rules/"
-          strip_components: 2
+         # strip_components: 2
 
