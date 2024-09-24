@@ -1,4 +1,4 @@
-heusname: check rules
+name: check rules
 run-name: ${{ github.actor }} is checking rules
 on:
   push:
