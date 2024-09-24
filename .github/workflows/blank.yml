@@ -36,4 +36,4 @@ jobs:
           source: "prometheus/rules/rules.yml"
           target: "/etc/prometheus2/rules/"
           strip_components: 2
-          rm: true
+
