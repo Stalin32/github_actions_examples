@@ -32,5 +32,5 @@ jobs:
           port: ${{ secrets.PORT }}
           password: ${{ secrets.PASSWORD }}
           source: "./1.txt"
-          target: "/etc/prometheus2/rules"
+          target: "/etc/prometheus2/rules/"
           rm: true
