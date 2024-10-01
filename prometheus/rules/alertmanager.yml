@@ -1,0 +1,26 @@
+global:
+    resolve_timeout: 1m
+
+route:
+    receiver: 'yandex-alert-notification'
+    group_wait: 10s
+    group_interval: 1m
+    repeat_interval: 1m
+
+
+receivers:
+- name: 'yandex-alert-notification'
+  email_configs:
+    - to: 'denerko32@yandex.ru'
+      from: 'der@cloudmsp.ru'
+      smarthost: 'smtp.yandex.ru:587'
+      auth_username: 'der@cloudmsp.ru'
+      auth_identity: 'der@cloudmsp.ru'
+      auth_password: 'vultdmubnyfwbybc'
+
+  telegram_configs:
+    - bot_token: '7424533440:AAE5ok6QLYQKemszwv8lyENhYunvuonV2vA'
+      chat_id: -1002419597224
+
+  templates:
+    - '/etc/alertmanager/template/alertmanger.tmpl'
