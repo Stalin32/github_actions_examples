@@ -30,7 +30,7 @@ groups:
 
 
   - alert: СЕРВЕР НЕДОСТУПЕН!!!
-    expr: up == 0
+    expr: up{job="$job"}
     for: 10s
     annotations:
       title: 'СЕРВЕР НЕДОСТУПЕН'
